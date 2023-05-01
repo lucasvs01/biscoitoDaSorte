@@ -1,0 +1,148 @@
+:root {
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+
+    height: 100vh;
+}
+
+main {
+    background: #ffff;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+
+    width: min(42.4rem);
+
+    margin: 24rem auto;
+
+    display: grid;
+    place-items: center;
+    
+    
+}
+
+.screen1 h1, .screen2 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+
+    text-align: center;
+
+    color: hsla(238, 27%, 28%, 1);
+}
+
+/* screen1 */
+
+.screen1 {
+    margin: 4.8rem 6.4rem 6.4rem;
+
+
+}
+
+
+.screen1 p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    
+    text-align: center;
+
+    margin-top: 1.4rem;
+
+
+    color: hsla(238, 27%, 28%, 1);
+
+
+}
+
+
+.screen1 img {
+    margin-top: 2rem;
+}
+.screen1 img:hover {
+    cursor: pointer;
+}
+
+@keyframes animate-shake{
+}
+
+
+/* screen2 */
+
+.screen2 {
+    display: grid;
+    gap: 1.7rem;
+
+    place-items: center;
+
+    margin: 4.8rem 6.4rem;
+
+}
+
+.screen2 h1 {
+
+}
+
+.screen2 p {
+    width: 100%;
+    padding: 1rem;
+
+    background-color: #E4EDF1;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+
+    animation: animate-traslateY 2s 200ms forwards;
+
+
+}
+
+@keyframes animate-traslateY{
+    0%{
+        transform: translateY(18rem) scale(0);
+    };
+
+    100%{
+        transform: translateY(0) scale(1);
+    };
+}
+
+
+.screen2 button {
+    padding: 1.6rem;
+
+    background-color: hsla(35, 100%, 50%, 1);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+
+    border: none;
+    border-radius: .4rem;
+}
+
+
+
+/* hide */
+
+.hide {
+    display: none;
+}
