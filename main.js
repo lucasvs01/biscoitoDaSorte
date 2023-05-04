@@ -10,13 +10,30 @@ const menssageList = [
     "A juventude não é uma época da vida, é um estado de espírito.",
     "Podemos escolher o que semear, mas somos obrigados a colher o que plantamos.",
 ]
-let radonNumber = Math.floor(Math.random()*10)
-let printMenssage = menssageList[radonNumber]
 
+function changeTextInScreen2 () {
+    let radonNumber = Math.floor(Math.random()*10)
+    let printMenssage = menssageList[radonNumber]
 
-function returnTextH2P () {
     let h2 = document.querySelector(".screen2 p")
     h2.innerHTML = printMenssage
+    
 }
 
-returnTextH2P();
+function changeClassHideInScreens(){
+    
+    document.querySelector(".screen1").classList.add("hide")
+    document.querySelector(".screen2").classList.remove("hide")
+    
+}
+
+function ButtonForClickToChangeTextScreen2 (){
+    
+    document.querySelector(".screen1").classList.remove("hide")
+    document.querySelector(".screen2").classList.add("hide")
+    
+    changeTextInScreen2()
+    
+}
+
+changeTextInScreen2()
