@@ -1,3 +1,5 @@
+//Variaveis
+
 const menssageList = [
     "A vida trará coisas boas se tiver paciência.",
     "Demonstre amor e alegria em todas as oportunidades e verá que a paz nasce dentro de si.",
@@ -11,6 +13,17 @@ const menssageList = [
     "Podemos escolher o que semear, mas somos obrigados a colher o que plantamos.",
 ]
 
+let screen1 = document.querySelector(".screen1")
+let screen2 = document.querySelector(".screen2")
+let button = document.querySelector("#btnChangeText")
+let cookieScreen1 = document.querySelector("#imgClickScreen1")
+
+//Eventos
+cookieScreen1.addEventListener("click", changeClassHideInScreens)
+button.addEventListener("click", ButtonForOpenOtherFuturneCookie)
+document.addEventListener("keydown", enterClick)
+
+//Funções
 function changeTextInScreen2 () {
     let radonNumber = Math.floor(Math.random()*10)
     let printMenssage = menssageList[radonNumber]
@@ -22,18 +35,26 @@ function changeTextInScreen2 () {
 
 function changeClassHideInScreens(){
     
-    document.querySelector(".screen1").classList.add("hide")
-    document.querySelector(".screen2").classList.remove("hide")
+    screen1.classList.toggle("hide")
+    screen2.classList.toggle("hide")
     
 }
 
-function ButtonForClickToChangeTextScreen2 (){
-    
-    document.querySelector(".screen1").classList.remove("hide")
-    document.querySelector(".screen2").classList.add("hide")
+function ButtonForOpenOtherFuturneCookie (){
     
     changeTextInScreen2()
+    changeClassHideInScreens()
     
 }
 
+function enterClick(e){
+    if(e.key == "Enter" && screen1.classList.contains("hide")) {
+        ButtonForOpenOtherFuturneCookie()
+    }
+}
+
+// Retorno de funçóes
+
 changeTextInScreen2()
+
+

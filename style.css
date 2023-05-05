@@ -74,7 +74,7 @@ main {
 .screen1 img:hover {
     cursor: pointer;
 
-    animation: animate-shake 150ms 200ms forwards infinite;
+    animation: animate-shake 120ms 200ms forwards infinite;
 }
 
 @keyframes animate-shake{
